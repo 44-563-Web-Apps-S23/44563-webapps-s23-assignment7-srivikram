@@ -3,6 +3,7 @@
 
 <head>
     <title>Hunter</title>
+    <script src="catandmouse.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -11,44 +12,43 @@
     <p>Click on the bushes to search for the mouse, beware the cat</p>
     <div id="bushes">Number of bushes checked is zero.</div>
     <div id="penalty">Penalty is zero.</div>
-    <p>Click for help.</p>
-    <div id="help">Help report</div>
+    <p>Click for help. </p>
+    <div class="btn btn-warning" id="help" onclick="help()">Help report</div>
 
     <div id="game-field">
         <div class="row">
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(0)" id="c1r1"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(1)" id="c2r1"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(2)" id="c3r1"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(3)" id="c4r1"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(4)" id="c5r1"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(5)" id="c6r1"></div>
         </div>
         <div class="row">
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(6)" id="c1r2"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(7)" id="c2r2"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(8)" id="c3r2"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(9)" id="c4r2"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(10)" id="c5r2"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(11)" id="c6r2"></div>
         </div>
         <div class="row">
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(12)" id="c1r3"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(13)" id="c2r3"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(14)" id="c3r3"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(15)" id="c4r3"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(16)" id="c5r3"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(17)" id="c6r3"></div>
         </div>
         <div class="row">
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
-            <div class="location"><img src="Images/bushes.jpg"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(18)" id="c1r4"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(19)" id="c2r4"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(20)" id="c3r4"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(21)" id="c4r4"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(22)" id="c5r4"></div>
+            <div class="location"><img src="Images/bushes.jpg" alt="bush" onclick="check(23)" id="c6r4"></div>
         </div>
     </div>
-
 </body>
 
 </html>
