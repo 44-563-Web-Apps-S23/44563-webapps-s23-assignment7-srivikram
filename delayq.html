@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Delaying Queue</title>
+	<script>
+		function addValue() {
+			var inputValue = document.getElementById("inputValue").value;
+			var newElement = document.createElement("div");
+			newElement.innerHTML = inputValue;
+			newElement.className = "delayQ";
+			document.getElementById("flex-container").appendChild(newElement);
+		}
+	</script>
+	<style>
+		.delayQ {
+			background-color: yellow;
+			border: 1px solid black;
+			margin: 5px;
+			padding: 5px;
+			text-align: center;
+			width: 100px;
+		}
+
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Manohar Builds a Delaying Queue</h1>
+	<input type="text" id="inputValue">
+	<button onclick="addValue()">Add value</button>
+	<div id="flex-container" class="flex-container">
+		<div class="delayQ">Item 1</div>
+		<div class="delayQ">Item 2</div>
+		<div class="delayQ">Item 3</div>
+	</div>
+</body>
+
+</html>
