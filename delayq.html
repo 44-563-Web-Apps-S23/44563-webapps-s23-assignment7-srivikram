@@ -4,12 +4,35 @@
 <head>
 	<title>Delaying Queue</title>
 	<script>
-		function addValue() {
-			var inputValue = document.getElementById("inputValue").value;
-			var newElement = document.createElement("div");
-			newElement.innerHTML = inputValue;
-			newElement.className = "delayQ";
-			document.getElementById("flex-container").appendChild(newElement);
+		function makeNewDiv() {
+			let element = document.createElement("div")
+			let newElement = document.getElementById("input").value
+			element.innerHTML = newElement
+			element.className = "delayQ"
+			element.style.color = "red"
+
+			let container = document.getElementById('target')
+			container.appendChild(element)
+
+		}
+		function get() {
+			let queueItems = document.getElementsByClassName("delayQ")
+			let length_elements = queueItems.length
+			if (length_elements > 0) {
+				queueItems[length_elements - 1].remove()
+			}
+		}
+		function delay() {
+			let queueItems = document.getElementsByClassName("delayQ")
+			let length_elements = queueItems.length
+			if (length_elements == 0 || length_elements == 1) {
+				console.log("Not enough elements to delay")
+			} else {
+				let removedItem = queueItems[length_elements - 1]
+				queueItems[length_elements - 1].remove()
+				let container_div = document.getElementById("target")
+				container_div.insertBefore(removedItem, container_div.firstChild)
+			}
 		}
 	</script>
 	<style>
@@ -32,9 +55,11 @@
 
 <body>
 	<h1>Manohar Builds a Delaying Queue</h1>
-	<input type="text" id="inputValue">
-	<button onclick="addValue()">Add value</button>
-	<div id="flex-container" class="flex-container">
+	<input type="text" id="input">
+	<button class="btn" onclick="makeNewDiv()">Add Value</button>
+	<input class="btn" type="button" value="Get" onclick="get()">
+	<input class="btn" type="button" value="Delay" onclick="delay()">
+	<div id="target" class="flex-container">
 		<div class="delayQ">Item 1</div>
 		<div class="delayQ">Item 2</div>
 		<div class="delayQ">Item 3</div>
