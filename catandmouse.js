@@ -53,3 +53,12 @@ function help() {
     penalty = penalty + 2;
     document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
 }
+function newGame() {
+    mouseLocation = Math.floor(Math.random() * 24)
+    catLocation = Math.floor(Math.random() * 24)
+    document.getElementById("bushes").innerHTML = "Number of bushes checked is 0"
+    document.getElementById("penalty").innerHTML = "Penalty is 0"
+    for (var i = 0; i <= 23; i++) {
+        document.getElementById(images[i]).src = "Images/bushes.jpg"
+    }
+}

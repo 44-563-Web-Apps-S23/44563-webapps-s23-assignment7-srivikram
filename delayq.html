@@ -19,7 +19,7 @@
 			let queueItems = document.getElementsByClassName("delayQ")
 			let length_elements = queueItems.length
 			if (length_elements > 0) {
-				queueItems[length_elements - 1].remove()
+				queueItems[0].remove()
 			}
 		}
 		function delay() {
@@ -33,6 +33,13 @@
 				let container_div = document.getElementById("target")
 				container_div.insertBefore(removedItem, container_div.firstChild)
 			}
+		}
+		function promote() {
+			let queueItems = document.getElementsByClassName("delayQ")
+			let length_elements = queueItems.length
+			let num = Math.floor(Math.random() * length_elements)
+			let randNum = queueItems[num]
+			randNum.parentNode.insertBefore(randNum, randNum.parentNode.firstChild)
 		}
 	</script>
 	<style>
@@ -59,6 +66,7 @@
 	<button class="btn" onclick="makeNewDiv()">Add Value</button>
 	<input class="btn" type="button" value="Get" onclick="get()">
 	<input class="btn" type="button" value="Delay" onclick="delay()">
+	<input class="btn" type="button" value="Promote" onclick="promote()">
 	<div id="target" class="flex-container">
 		<div class="delayQ">Item 1</div>
 		<div class="delayQ">Item 2</div>

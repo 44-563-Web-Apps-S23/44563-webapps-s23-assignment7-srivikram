@@ -25,12 +25,13 @@
       console.log(reactTime)
     }
     function startTime() {
-      for (let i = 0; i < 9; i++) {
+      let startCount = randCount()
+      for (let i = 0; i < startCount; i++) {
         setTimeout(
           function () {
             console.log(i)
             document.getElementById("counter").innerHTML = i
-          }, (8 - i) * 1000
+          }, (startCount - i) * 1000
         )
       }
       setTimeout(
@@ -44,6 +45,10 @@
           }
         }, 8000
       )
+    }
+    function randCount() {
+      let num = Math.floor(Math.random() * 9) + 2;
+      return num;
     }
   </script>
 </body>
